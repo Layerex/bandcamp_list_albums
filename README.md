@@ -1,11 +1,11 @@
-# bandcamp_name_your_price_dl
+# bandcamp_list_albums
 
 List albums from bandcamp page of artist or label.
 
 ## Installation
 
 ```sh
-pip install bandcamp-list-albums
+pip install bandcamp_list_albums
 ```
 
 ## Usage
