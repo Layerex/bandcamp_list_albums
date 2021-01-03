@@ -45,12 +45,14 @@ def main():
         help="check if artist name is equal to specified one instead of searching by regex",
     )
     parser.add_argument(
+        "--titles"
         "--print-titles",
         "-t",
         action="store_true",
         help="only output album titles",
     )
     parser.add_argument(
+        "--urls"
         "--print-urls",
         "-u",
         action="store_true",
@@ -58,6 +60,8 @@ def main():
     )
     parser.add_argument(
         "--json",
+        "--print-json",
+        "-j",
         action="store_true",
         help="output data as json",
     )
