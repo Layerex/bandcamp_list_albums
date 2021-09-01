@@ -68,7 +68,7 @@ def main():
     args = parser.parse_args(sys.argv[1:])
 
     output_format_args_count = sum(
-        arg for arg in (args.print_titles, args.print_urls, args.print_json)
+        (args.print_titles, args.print_urls, args.print_json)
     )
     if output_format_args_count > 1:
         parser.error("Too many arguments.")
