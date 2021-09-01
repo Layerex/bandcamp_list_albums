@@ -29,4 +29,5 @@ setuptools.setup(
             "bandcamp_list_albums = bandcamp_list_albums:main",
         ],
     },
+    install_requires=["beautifulsoup4", "requests"]
 )
