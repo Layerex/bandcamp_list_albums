@@ -45,22 +45,22 @@ def main():
         help="check if artist name is equal to specified one instead of searching by regex",
     )
     parser.add_argument(
-        "--titles"
         "--print-titles",
+        "--titles",
         "-t",
         action="store_true",
         help="only output album titles",
     )
     parser.add_argument(
-        "--urls"
         "--print-urls",
+        "--urls",
         "-u",
         action="store_true",
         help="only output album urls",
     )
     parser.add_argument(
-        "--json",
         "--print-json",
+        "--json",
         "-j",
         action="store_true",
         help="output data as json",
@@ -68,7 +68,7 @@ def main():
     args = parser.parse_args(sys.argv[1:])
 
     output_format_args_count = sum(
-        arg for arg in (args.print_titles, args.print_urls, args.json)
+        arg for arg in (args.print_titles, args.print_urls, args.print_json)
     )
     if output_format_args_count > 1:
         parser.error("Too many arguments.")
@@ -81,7 +81,7 @@ def main():
     ):
         results.append(album)
 
-    if args.json:
+    if args.print_json:
         print(json.dumps(results))
     else:
         if args.print_titles:
